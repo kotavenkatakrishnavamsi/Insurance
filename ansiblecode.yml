@@ -3,18 +3,19 @@
   become : true
   connection: ssh
   tasks:
-  - name: updating the New Ec2 Machine 
+  - name:for updating the  Ec2 Machine 
     command: sudo yum update
 
-  - name: Install Docker
+  - name:to Install Docker
     command: sudo yum install docker -y
     become: yes
     become_user: root
 
-  - name: Start Docker service
+  - name: for Starting Docker service
     command: sudo systemctl start docker
     become: yes
     become_user: root
 
-  - name: Deploy the Image and Run as Container
+  - name: for Deploying the Image and Run as Container
     command: docker run -itd -p 8084:8081 cbabu85/insure-me-app:4.0
++
