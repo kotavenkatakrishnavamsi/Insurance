@@ -27,6 +27,12 @@ pipeline {
         sh 'docker build -t kvkvamsi/insure-app:1.0 .'
                     }
             }
+ stage('Login to Dockerhub') {
+      steps {
+        withCredentials([usernamePassword(credentialsId: 'dockerlogin', passwordVariable: 'dockerpassword', usernameVariable: 'dockerusername')]) {
+        sh 'docker login -u ${dockerusername} -p ${dockerpassword}'
+                                                                    }
+                                }
 
     }
 }
