@@ -18,4 +18,3 @@
 
   - name: Deploy the Image and Run as Container
     command: docker run -itd -p 8084:8081 kvkvamsi/insure-app:1.0
-+
