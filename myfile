@@ -33,6 +33,7 @@ pipeline {
         sh 'docker login -u ${dockerusername} -p ${dockerpassword}'
                                                                     }
                                 }
+}
 
     }
 }
