@@ -24,7 +24,7 @@ pipeline {
             }
      stage('Create a Docker image from the Package Insure-Me.jar file') {
       steps {
-        sh 'docker build -t vamsi129/insure-app:1.0 .'
+        sh 'docker build -t kvkvamsi/insure-app:1.0 .'
                     }
             }
 
